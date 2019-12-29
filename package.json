@@ -1,0 +1,17 @@
+{
+  "name": "discord-blacklist-system",
+  "version": "1.0.0",
+  "description": "A discord bot for blacklisting people!",
+  "main": "index.js",
+  "dependencies": {
+    "quick.db": "*",
+    "discord.js": "^11.5.1",
+    "enmap": "^5.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "MrSon",
+  "license": "ISC"
+}
