@@ -6,4 +6,4 @@ A quick system with quick.db by which you can blacklist people!
 * run npm install
 * run index.js file 
 # Want help? contact me on discord
-* My username is MrSon#0255
+* My discord server: https://discord.gg/AC5QFtv
