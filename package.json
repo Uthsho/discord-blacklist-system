@@ -4,13 +4,16 @@
   "description": "A discord bot for blacklisting people!",
   "main": "index.js",
   "dependencies": {
-    "quick.db": "*",
-    "discord.js": "^11.5.1",
-    "enmap": "^5.2.4"
+    "discord.js": "^12.5.0",
+    "enmap": "^5.8.1",
+    "quick.db": "^7.1.2"
   },
   "devDependencies": {},
   "scripts": {
     "start": "node index.js"
+  },
+  "engines": {
+    "node": "12.x"
   },
   "author": "MrSon",
   "license": "ISC"
