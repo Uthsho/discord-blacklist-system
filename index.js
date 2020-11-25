@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const db = require("quick.db");
 const client = new Discord.Client();
-const config = require("./config.json);
+const config = require("./config.json");
 client.commands = new Enmap();
 
 fs.readdir("./commands/", (err, files) => {
@@ -28,7 +28,7 @@ const prefix = config.prefix
 client.on("message", async message => {
   if (message.author.bot) return;
   
-  let user = db.fetch(`blacklist_${message.author.id}`);
+  let user = db.get(`blacklist_${message.author.id}`);
   if(user == true) return;
 
   // Ignore messages not starting with the prefix (in config.json)
@@ -48,4 +48,4 @@ client.on("message", async message => {
   cmd.run(client, message, args);
 });
 // finally done!
-client.login(config.prefix)
+client.login(config.token)
