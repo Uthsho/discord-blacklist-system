@@ -1,11 +1,11 @@
 const db = require("quick.db");
 const config = require("./../config.json");
 exports.run = async(client, message, args) => {
-  if(!message.author.id === config.owner) {
-    let user = client.users.get(args[0]);
+  if(message.author.id === config.owner) {
+    let user = await client.users.fetch(args[0]);
     if(!user) return message.channel.send(`Invalid user or id ._.`);
   
-    let fetched = db.fetch(`blacklist_${user.id}`)
+    let fetched = db.get(`blacklist_${user.id}`)
     if(!fetched) {
       return message.channel.send(`This user is not blacklisted`);
     }else{
